@@ -16,7 +16,12 @@ public class GameImpl  implements Game{
     private boolean validNumberRange = true;
 
 
-    public GameImpl(NumberGenerator numberGenerator) {
+//    public GameImpl(NumberGenerator numberGenerator) {
+//        this.numberGenerator = numberGenerator;
+//    }
+
+
+    public void setNumberGenerator(NumberGenerator numberGenerator) {
         this.numberGenerator = numberGenerator;
     }
 
