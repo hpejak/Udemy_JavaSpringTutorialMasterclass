@@ -24,9 +24,6 @@ public class Main {
         int number = numberGenerator.next();
         log.info("Number is: {}", number);
 
-        game.reset();
-
-
         context.close();
     }
 }
