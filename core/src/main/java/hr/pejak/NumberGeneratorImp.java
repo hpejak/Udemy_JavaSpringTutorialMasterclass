@@ -1,7 +1,10 @@
 package hr.pejak;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Random;
 
+@Component
 public class NumberGeneratorImp implements NumberGenerator{
 
     private final Random random = new Random();

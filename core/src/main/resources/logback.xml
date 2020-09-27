@@ -6,7 +6,7 @@
     </appender>
 
     <logger name="hr.pejak" level="INFO"/>
-    <logger name="org.springframework" level="ERROR"/>
+    <logger name="org.springframework" level="DEBUG"/>
 
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
