@@ -17,12 +17,17 @@ public class Main {
         ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(NumberConfiguration.class);
 
         NumberGenerator numberGenerator = context.getBean(NumberGenerator.class);
-
-//        Methods
         int number = numberGenerator.next();
+
         log.info("Number is: {}", number);
 
-        Game game = context.getBean(Game.class);
+
+        MessageGenerator messageGenerator = context.getBean(MessageGenerator.class);
+        String mainMessage = messageGenerator.getMainMessage();
+        String resultMessage = messageGenerator.getResultMessage();
+
+        log.info("Main message is: {} and result message is {}", mainMessage, resultMessage);
+
 
         context.close();
     }
