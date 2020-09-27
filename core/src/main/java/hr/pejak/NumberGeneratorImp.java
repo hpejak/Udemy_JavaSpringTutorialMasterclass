@@ -5,7 +5,7 @@ import java.util.Random;
 public class NumberGeneratorImp implements NumberGenerator{
 
     private final Random random = new Random();
-    private int maxNumber = 100;
+    private final int maxNumber = 100;
 
 //    Public Methods
     @Override

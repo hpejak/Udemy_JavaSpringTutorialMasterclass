@@ -24,6 +24,7 @@ public class Main {
         log.info("Number is: {}", number);
 
         Game game = context.getBean(Game.class);
+        log.info(game.toString());
 
         context.close();
     }
