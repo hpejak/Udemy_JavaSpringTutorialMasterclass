@@ -1,5 +1,8 @@
-package hr.pejak;
+package hr.pejak.console;
 
+import hr.pejak.MessageGenerator;
+import hr.pejak.NumberConfiguration;
+import hr.pejak.NumberGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -26,7 +29,7 @@ public class Main {
         String mainMessage = messageGenerator.getMainMessage();
         String resultMessage = messageGenerator.getResultMessage();
 
-        log.info("Main message is: {} and result message is {}", mainMessage, resultMessage);
+        log.info("hr.pejak.console.Main message is: {} and result message is {}", mainMessage, resultMessage);
 
 
         context.close();

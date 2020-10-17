@@ -22,11 +22,30 @@ public class MessageGeneratorImpl implements MessageGenerator{
 
     @Override
     public String getMainMessage() {
-        return "Main message representation";
+        return "Number is between " + game.getSmallest() +
+                " and " + game.getBiggest() + ". Guess which number is?";
     }
 
     @Override
     public String getResultMessage() {
-        return "Result Message representation";
+
+        if(game.isGameWon()) {
+            return "Congratulation!!!! You won the game by guessing the number " + game.getNumber();
+        } else if (game.isGameLost()) {
+            return "Sorry. You lost the game, the number was " + game.getNumber();
+        } else if (game.isValidNumberRange()){
+            return "You're choice is not in valid range";
+        } else if (game.getRemainingGuesses() == guessCount) {
+            return "What is your first guess ?";
+        } else {
+            String direction = "Lower";
+
+            if (game.getGuess() < game.getNumber()){
+                direction = "Higher";
+            }
+
+            return direction + "! You have " + game.getRemainingGuesses() + " guess left";
+        }
+
     }
 }
