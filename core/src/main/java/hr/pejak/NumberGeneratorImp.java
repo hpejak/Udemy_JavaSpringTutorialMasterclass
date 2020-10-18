@@ -1,5 +1,6 @@
 package hr.pejak;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
@@ -8,7 +9,9 @@ import java.util.Random;
 public class NumberGeneratorImp implements NumberGenerator{
 
     private final Random random = new Random();
-    private final int maxNumber = 100;
+
+    @Autowired
+    private int maxNumber;
 
 //    Public Methods
     @Override
