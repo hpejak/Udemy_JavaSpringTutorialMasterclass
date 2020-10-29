@@ -11,6 +11,7 @@ public class NumberGeneratorImp implements NumberGenerator{
     private final Random random = new Random();
 
     @Autowired
+    @MaxNumber
     private int maxNumber;
 
 //    Public Methods
