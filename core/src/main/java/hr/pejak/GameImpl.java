@@ -9,15 +9,12 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 @Component
-public class GameImpl  implements Game{
+public class GameImpl implements Game {
 
     private static final Logger log = LoggerFactory.getLogger(GameImpl.class);
 
-    @Autowired
-    private NumberGenerator numberGenerator;
-    @Autowired
-    @GuessCount
-    private int guessCount;
+    private final NumberGenerator numberGenerator;
+    private final int guessCount;
     private int number;
     private int guess;
     private int smallest;
@@ -25,13 +22,13 @@ public class GameImpl  implements Game{
     private int remainingGuesses;
     private boolean validNumberRange = true;
 
+    @Autowired
+    public GameImpl(NumberGenerator numberGenerator, @GuessCount int guessCount) {
+        this.numberGenerator = numberGenerator;
+        this.guessCount = guessCount;
+    }
 
-//    public GameImpl(NumberGenerator numberGenerator) {
-//        this.numberGenerator = numberGenerator;
-//    }
-
-
-//    *** init ***
+    //    *** init ***
     @PostConstruct
     @Override
     public void reset() {
@@ -46,7 +43,7 @@ public class GameImpl  implements Game{
     }
 
     @PreDestroy
-    public void preDestroy(){
+    public void preDestroy() {
         log.info("pre Destroy");
     }
 
@@ -85,12 +82,12 @@ public class GameImpl  implements Game{
     public void check() {
         checkValidNumberRange();
 
-        if (validNumberRange){
-            if (guess > number){
+        if (validNumberRange) {
+            if (guess > number) {
                 biggest = guess - 1;
             }
 
-            if (guess < number){
+            if (guess < number) {
                 smallest = guess + 1;
             }
         }

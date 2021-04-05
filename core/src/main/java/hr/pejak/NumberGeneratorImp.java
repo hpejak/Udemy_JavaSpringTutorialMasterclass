@@ -9,17 +9,17 @@ import java.util.Random;
 public class NumberGeneratorImp implements NumberGenerator{
 
     private final Random random = new Random();
+    private final int maxNumber;
+    private final int minNumber;
 
+    //  Constructor
     @Autowired
-    @MaxNumber
-    private int maxNumber;
+    public NumberGeneratorImp(@MaxNumber int maxNumber, @MinNumber int minNumber) {
+        this.maxNumber = maxNumber;
+        this.minNumber = minNumber;
+    }
 
-    @Autowired
-    @MinNumber
-    private int minNumber;
-
-
-    //    Public Methods
+    //  Public Methods
     @Override
     public int next() {
         return random.nextInt((maxNumber-minNumber) + minNumber);
