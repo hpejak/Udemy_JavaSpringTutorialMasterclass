@@ -5,10 +5,10 @@
         </encoder>
     </appender>
 
-    <logger name="hr.pejak" level="INFO"/>
-    <logger name="org.springframework" level="INFO"/>
+    <logger name="hr.pejak" level="DEBUG"/>
+    <logger name="org.springframework" level="DEBUG"/>
 
-    <root level="INFO">
+    <root level="DEBUG">
         <appender-ref ref="STDOUT"/>
     </root>
 </configuration>
