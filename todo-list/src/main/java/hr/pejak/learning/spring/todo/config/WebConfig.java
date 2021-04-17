@@ -1,17 +1,20 @@
 package hr.pejak.learning.spring.todo.config;
 
+import hr.pejak.learning.spring.todo.utill.ViewNames;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
 @EnableWebMvc
 @Configuration
 @ComponentScan(basePackages = "hr.pejak.learning.spring.todo")
-public class WebConfig {
+public class WebConfig implements WebMvcConfigurer {
 
     // constants
     public static final String RESOLVER_PREFIX = "/WEB-INF/view/";
@@ -25,5 +28,11 @@ public class WebConfig {
         viewResolver.setSuffix(RESOLVER_SUFFIX);
 
         return viewResolver;
+    }
+
+    // override methods
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/").setViewName(ViewNames.HOME);
     }
 }

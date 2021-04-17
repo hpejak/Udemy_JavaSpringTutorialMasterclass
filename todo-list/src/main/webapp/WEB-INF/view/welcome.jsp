@@ -4,7 +4,8 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>View for ${user}</h1>
+    <h1>${helloMessage}</h1>
+    <h2>${age}</h2>
     <p>${welcomeMessage}</p>
 </body>
 </html>
