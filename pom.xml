@@ -6,6 +6,7 @@
 
     <groupId>hr.pejak</groupId>
     <artifactId>java-spring-tutorial</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.0</version>
 
 </project>
