@@ -7,7 +7,11 @@
 <body>
     <div align="center">
         <h1>Welcome</h1>
-        <a th:href="play" th:text="Play" href="https://www.google.com">Click</a>
+<!--        Preprocessing dose not work for some reason-->
+<!--        <a th:href="@{__${T(hr.pejak.util.GameMappings).PLAY}__}"-->
+        <a th:href="play"
+           th:text="Play"
+           href="https://www.google.com">Click</a>
     </div>
 </body>
 </html>
