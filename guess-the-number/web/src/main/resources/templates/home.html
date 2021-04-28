@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
+<html lang="en" >
+<head id="headId">
     <meta charset="UTF-8">
-    <title>Guess the Number</title>
+    <title>Title</title>
 </head>
 <body>
     <div align="center">
         <h1>Welcome</h1>
-<!--        Preprocessing dose not work for some reason-->
-<!--        <a th:href="@{__${T(hr.pejak.util.GameMappings).PLAY}__}"-->
-        <a th:href="play"
-           th:text="Play"
-           href="https://www.google.com">Click</a>
+        <a id="playLink" href="play.html">Click</a>
     </div>
+    <footer id="footerId">Test</footer>
 </body>
 </html>

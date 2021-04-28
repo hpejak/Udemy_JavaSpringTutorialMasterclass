@@ -1,0 +1,19 @@
+<thlogic>
+    <attr sel="#headId"
+            th:replace="~{fragments/head :: headFragment}" />
+
+    <attr sel="#main-message"
+            th:text="${mainMessage}" />
+    <!--    th:text="${__${T(hr.pejak.util.AttributeNames).MAIN_MESSAGE}__}" />-->
+
+    <attr sel="#result-message"
+          th:text="${resultMessage}" />
+    <!--  th:text="${__${T(hr.pejak.util.AttributeNames).RESULT_MESSAGE}__}" />-->
+
+    <attr sel="#game-form"
+          th:action="play" />
+<!--    th:action="@{__${T(hr.pejak.util.GameMappings).PLAY}__}" />-->
+
+    <attr sel="#footerId"
+          th:replace="~{fragments/footer :: footerFragment}" />
+</thlogic>

@@ -1,0 +1,13 @@
+<thlogic>
+    <attr sel="#headId"
+          th:replace="~{fragments/head :: headFragment}"/>
+
+    <attr sel="#playLink"
+          th:href="play"/>
+    <!--        Preprocessing dose not work for some reason-->
+    <!--    th:href="@{__${T(hr.pejak.util.GameMappings).PLAY}__}"-->
+
+    <attr sel="#footerId"
+          th:replace="~{fragments/footer :: footerFragment}"
+          th:text="Play"/>
+</thlogic>

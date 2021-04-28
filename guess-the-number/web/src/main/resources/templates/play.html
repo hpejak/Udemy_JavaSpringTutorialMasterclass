@@ -1,32 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
+<html >
+<head id="headId">
     <meta charset="UTF-8">
-    <title>Guess the Number</title>
+    <title>Title</title>
 </head>
 <body>
-    <div align="center">
-        <h1>Guess the Number Game</h1>
-        <!--        Preprocessing dose not work for some reason-->
-<!--        <h3 th:text="${__${T(hr.pejak.util.AttributeNames).MAIN_MESSAGE}__}">Main Message Content</h3>-->
-<!--        <h3 th:text="${__${T(hr.pejak.util.AttributeNames).RESULT_MESSAGE}__}">Result Message Content</h3>-->
-        <h3 th:text="${mainMessage}">Main Message Content</h3>
-        <h3 th:text="${resultMessage}">Result Message Content</h3>
+<div align="center">
+    <h1>Guess the Number Game</h1>
+    <!--        Preprocessing dose not work for some reason-->
+    <h3 id="main-message">Main Message Content</h3>
+    <h3 id="result-message">Result Message Content</h3>
+    <!--        <h3 th:text="${mainMessage}">Main Message Content</h3>-->
+    <!--        <h3 th:text="${resultMessage}">Result Message Content</h3>-->
 
 
-<!--        Preprocessing dose not work for some reason-->
-<!--        <form th:action="@{__${T(hr.pejak.util.GameMappings).PLAY}__}"-->
-        <form th:action="play"
-              acction="some"
-              method="post">
-            <label for="guess">Enter your guess</label>
-            <input id="guess" type="number" name="guess"/>
-            <input type="submit" value="Submit"/>
-        </form>
+    <!--        Preprocessing dose not work for some reason-->
+    <!--        <form th:action="play"-->
+    <form id="game-form"
+          action="some"
+          method="post">
+        <label for="guess">Enter your guess</label>
+        <input id="guess" type="number" name="guess"/>
+        <input type="submit" value="Submit"/>
+    </form>
 
-        <footer>
-            <p>Create by hpejak</p>
-        </footer>
-    </div>
+
+</div>
+<footer id="footerId">Test</footer>
 </body>
 </html>

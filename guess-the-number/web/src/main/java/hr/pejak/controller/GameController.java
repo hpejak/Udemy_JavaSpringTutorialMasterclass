@@ -43,4 +43,11 @@ public class GameController {
 
     }
 
+    @GetMapping(GameMappings.RESTART)
+    public String restartGame() {
+        log.info("Starting game again");
+        gameService.reset();
+        return GameMappings.REDIRECT_PLAY;
+    }
+
 }
